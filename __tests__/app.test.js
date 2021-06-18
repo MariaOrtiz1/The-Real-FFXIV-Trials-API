@@ -18,7 +18,7 @@ describe('app routes', () => {
       const signInData = await fakeRequest(app)
         .post('/auth/signup')
         .send({
-          email: 'jon@user.com',
+          email: 'john@arbuckle.com',
           password: '1234'
         });
       
