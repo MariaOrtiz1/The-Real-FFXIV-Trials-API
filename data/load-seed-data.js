@@ -27,10 +27,10 @@ async function run() {
     await Promise.all(
       trials.map(trial => {
         return client.query(`
-        INSERT INTO trials (name, level, itemLevel, boss, partySize, tomeStones, loot, expansion, owner_id)
+        INSERT INTO trials (name, level, item_level, boss, party_size, tome_stones, loot, expansion, owner_id)
         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);
                 `,
-        [trial.name, trial.level, trial.itemLevel, trial.boss, trial.partySize, trial.tomeStones, trial.loot, trial.expansion, user.id]);
+        [trial.name, trial.level, trial.item_level, trial.boss, trial.party_size, trial.tome_stones, trial.loot, trial.expansion, user.id]);
       })
     );
     

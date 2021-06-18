@@ -21,10 +21,10 @@ async function run() {
                   id SERIAL PRIMARY KEY NOT NULL,
                   name VARCHAR(512) NOT NULL,
                   level INTEGER NOT NULL,
-                  itemLevel INTEGER NOT NULL,
+                  item_level INTEGER NOT NULL,
                   boss VARCHAR(512) NOT NULL,
-                  partySize VARCHAR(512) NOT NULL,
-                  tomeStones VARCHAR(512) NOT NULL,
+                  party_size VARCHAR(512) NOT NULL,
+                  tome_stones VARCHAR(512) NOT NULL,
                   loot VARCHAR(512) NOT NULL,
                   expansion VARCHAR(512) NOT NULL,
                   owner_id INTEGER NOT NULL REFERENCES users(id)
